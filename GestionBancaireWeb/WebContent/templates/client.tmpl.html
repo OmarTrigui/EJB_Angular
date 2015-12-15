@@ -1,0 +1,52 @@
+<md-dialog aria-label="Mango (Fruit)" ng-controller="AppCtrl">
+    <md-content class="md-padding">
+        <form name="userForm">
+            <div layout-sm="column">
+
+                <h3>Client registration</h3>
+
+                <md-input-container flex><label>First
+                    Name</label> <input ng-model="user.firstName" placeholder="Placeholder text" name="first">
+
+                    <div ng-messages="userForm.first.$error">
+                        <div ng-message="required">Length must be larger than 1</div>
+                    </div>
+
+                </md-input-container>
+                <md-input-container flex><label>Last
+                    Name</label> <input ng-model="user.lastName" name="last">
+
+                    <div ng-messages="userForm.first.$error">
+                        <div ng-message="required">Length must be larger than 1</div>
+                    </div>
+
+                </md-input-container>
+            </div>
+            <div layout layout-sm="column">
+                <md-input-container flex><label>CIN</label> <input
+                        ng-model="user.cin" name="cin">
+
+                    <div ng-messages="userForm.cin.$error">
+                        <div ng-message="required">Length must be equals to 8</div>
+                    </div>
+
+                </md-input-container>
+                <md-input-container flex><label>Address</label>
+                    <input ng-model="user.address" name="address">
+
+                    <div ng-messages="userForm.addresse.$error">
+                        <div ng-message="required">Length must be larger than 1</div>
+                    </div>
+                </md-input-container>
+            </div>
+        </form>
+        <div class="md-actions" layout="row">
+            <span flex></span>
+            <md-button ng-click="answer('not useful')"> Cancel</md-button>
+            <md-button ng-click="saveClient()" class="md-primary"
+                       ng-disabled="user.cin.length != 8 || user.firstName.length == 0 || user.lastName.length == 0 || user.address.length == 0">
+                Create
+            </md-button>
+        </div>
+    </md-content>
+</md-dialog>

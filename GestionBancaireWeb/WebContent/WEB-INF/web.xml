@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>GestionBancaireWeb</display-name>
+
+	<welcome-file-list>
+		<welcome-file>/index.html</welcome-file>
+	</welcome-file-list>
+
+
+	<!-- COMPTE -->
+
+	<servlet>
+		<servlet-name>ajoutCompte</servlet-name>
+		<servlet-class>tn.enis.control.AjoutCbServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ajoutCompte</servlet-name>
+		<url-pattern>/AjoutCbServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>supprimerCompte</servlet-name>
+		<servlet-class>tn.enis.control.SupprimerCbServlet</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>supprimerCompte</servlet-name>
+		<url-pattern>/SupprimerCbServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>listCompte</servlet-name>
+		<servlet-class>tn.enis.control.ListCbServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>listCompte</servlet-name>
+		<url-pattern>/ListCbServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- CLIENT -->
+
+	<servlet>
+		<servlet-name>ajouterClient</servlet-name>
+		<servlet-class>tn.enis.control.AjoutClientServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ajouterClient</servlet-name>
+		<url-pattern>/AjoutClientServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>supprimerClient</servlet-name>
+		<servlet-class>tn.enis.control.SupprimerClientServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>supprimerClient</servlet-name>
+		<url-pattern>/SupprimerClientServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>listClient</servlet-name>
+		<servlet-class>tn.enis.control.ListClientServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>listClient</servlet-name>
+		<url-pattern>/ListClientServlet</url-pattern>
+	</servlet-mapping>
+
+
+
+</web-app>
+
+

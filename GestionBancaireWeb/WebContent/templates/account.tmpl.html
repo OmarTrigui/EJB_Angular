@@ -1,0 +1,36 @@
+<md-dialog aria-label="Mango (Fruit)" ng-controller="AppCtrl">
+    <md-content class="md-padding">
+        <form name="userForm">
+            <div layout-sm="column">
+
+                <h3>Account registration</h3>
+
+                <md-input-container flex><label>CIN</label> <input
+                        ng-model="user.cin"
+                        placeholder="Placeholder text" name="cin">
+
+                    <div ng-messages="userForm.cin.$error">
+                        <div ng-message="required">Length must be equal to 8</div>
+                    </div>
+                </md-input-container>
+
+                <md-input-container flex><label>Credit</label> <input
+                        ng-model="user.credit" name="credit">
+
+                    <div ng-messages="userForm.credit.$error">
+                        <div ng-message="required">Value must be larger than 1</div>
+                    </div>
+                </md-input-container>
+
+            </div>
+        </form>
+        <div class="md-actions" layout="row">
+            <span flex></span>
+            <md-button ng-click="answer('not useful')"> Cancel</md-button>
+            <md-button ng-click="saveAccount()" class="md-primary"
+                       ng-disabled="user.cin.length != 8 || user.credit.length == 0">
+                Create
+            </md-button>
+        </div>
+    </md-content>
+</md-dialog>

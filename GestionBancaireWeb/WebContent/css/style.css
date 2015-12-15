@@ -1,0 +1,65 @@
+md-content.md-default-theme {
+	background-color: #eee;
+}
+
+md-toolbar.md-talll {
+	height: 128px;
+	min-height: 200px;
+	max-height: 200px
+}
+
+md-card {
+	background-color: #fff;
+}
+
+md-card h2:first-of-type {
+	margin-top: 0;
+}
+
+md-toolbar .md-button.md-default-theme {
+	border-radius: 99%;
+}
+
+h2 {
+	font-weight: 400;
+}
+
+.md-toolbar-tools-bottom {
+	font-size: small;
+	border-radius: 99%;
+}
+
+.md-toolbar-tools-bottom :last-child {
+	opacity: 0.8;
+}
+
+md-toolbar:not (.md-hue-1 ), .md-fab {
+	fill: #fff;
+}
+
+.wid {
+	min-height: 200px;
+}
+
+md-sidenav {
+	fill: #737373;
+}
+
+md-sidenav ng-md-icon {
+	position: relative;
+	top: 5px;
+}
+
+.user-avatar {
+	border-radius: 99%;
+}
+
+/** Custom for 50/50 **/
+html, body, div.relative {
+	height: 100% !important;
+}
+
+.h50 {
+	max-height: 50% !important;
+	overflow-y: scroll;
+}
